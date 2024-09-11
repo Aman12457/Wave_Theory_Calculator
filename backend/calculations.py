@@ -29,7 +29,7 @@ def determine_wave_type(depth, wavelength):
 def evaluate_group_speed(wave_period, water_depth , wave_type , wave_celerity , wave_number):
     # Group speed calculation
     if wave_type == "Shallow water":
-        return 0.5 * (9.81 * water_depth) ** 0.5
+        return (9.81 * water_depth) ** 0.5
     
     elif wave_type == "Deep water":
         assumed_wave_length = 1.56 * wave_period ** 2
@@ -44,7 +44,7 @@ def evaluate_group_speed(wave_period, water_depth , wave_type , wave_celerity , 
 
 def energy_density(wave_height):
     # Energy density calculation
-    return (0.125 * 1000 * 9.81 * wave_height ** 2)
+    return (0.125 * 1025 * 9.81 * wave_height ** 2)
 
 
         
